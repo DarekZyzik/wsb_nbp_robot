@@ -6,11 +6,11 @@ deps:
 #lint:
 #	flake8 nbp.robot
 
-run:
-	PYTHONPATH=. robot nbp.robot
+#run:
+#	PYTHONPATH=. robot nbp.robot
 
-#test:
-#	PYTHONPATH=. py.test --verbose -s
+test:
+	PYTHONPATH=. robot nbp.robot
 #
 #docker_build:
 #	docker build -t hello-world-printer .
