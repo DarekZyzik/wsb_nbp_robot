@@ -1,0 +1,27 @@
+name: Package Project
+
+# kiedy mam uruchomic automatyzacje
+on: [ push ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      # pobierz kod
+      - uses: actions/checkout@v2
+      # moja aplikacja jest w Pythonie
+      - name: Set up Python 3
+        uses: actions/setup-python@v3
+      # instalacja wymaganych bibliotek
+      - name: Install deps
+        run: make deps
+      # lint
+#      - name: Linters
+#        run: make lint
+      # testy!!!!!
+      - name: Tests
+        run: make test
+      # Docker
+#      - name: Docker
+#        run: make docker_build
